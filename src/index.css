@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Nunito:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  padding: 20px;
+  color: #0086FF;
+  z-index: 10;
+}
+
+.setup--img{
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: url("images/setup-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.rectangle{
+  position: absolute;
+  width: 75vw;
+  height: 100vh;
+  left: 25%;
+  top: 0px;
+  background-color: #F9F6F6;
+  border-radius: 80px 0px 0px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container, .setup > .container, .login > .container , .otp > .container{
+  margin: 0 0;
+  width: 482px;
+  display: grid;
+  justify-items: center;
+}
+
+.input-area{
+  position: relative;
+  margin-bottom: 40px;
+  width: 425px;
+  display: grid;
+  grid-template-columns: 1fr;
+  backdrop-filter: blur(2px);
+  row-gap: 15px;
+}
+
+.input-field{
+  display: flex;
+  align-items: center;
+}
+
+.icons{
+  position: absolute;
+  padding: 16px;
+  padding-left: 20px;
+  transform: scale(0.6);
+}
+
+.group{
+  width: 425px;
+  padding: 10px;
+  background: #FDFDFD;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  border: none;
+}
+
+.group::placeholder, input[type=text], input[type=email], input[type=number], input[type=password], .country-codes > select{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #B9B8BA;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=password]{
+  padding-left: 80px;
+  color: #000;
+  border: solid 2px transparent;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus{
+  outline: none;
+  border: solid 2px #0086FF;
+}
+
+input[type=number]{
+  padding-left: 150px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  appearance: none;
+  margin: 0;
+}
+
+.otp--input{
+  overflow: hidden;
+  resize: none;
+  caret-color: #0086FF;
+}
+
+.country-codes{
+  position: absolute;
+  padding: 16px;
+  padding-left: 70px;
+}
+
+.country-codes > select{
+  border: none;
+}
+
+#togglePassword{
+  margin-left: -40px; 
+  cursor: pointer;
+  color: #B9B8BA;
+}
+
+.signup--text, .login--text, .otp--text, .otp--input::placeholder{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 65px;
+  color: #74777A;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login--text, .otp--text{
+  line-height: 45px;
+}
+
+.signup--smalltext, .login--smalltext, .login--mediumtext{
+  text-align: center;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #413E3E;
+}
+
+.login--smalltext{
+  padding-top: 20px;
+}
+
+.login--mediumtext{
+  font-size: 18px;
+  padding: 10px 40px;
+}
+
+.signup--smalltext > a, .login--mediumtext > a{
+  text-decoration: none;
+  color: #0086FF;
+}
+
+.signup--btn, .otp--btn{
+  width: 180px;
+  height: 40px;
+  margin: 15px;
+  background: #0086FF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 38px;
+  color: #FFFFFF;
+}
+
+.signup--btn{
+  position: relative;
+  left: 100%;
+  transform: translateX(-125%);
+}
+
+.otp--btn > a{
+  text-decoration: none;
+}
+
+.back:hover, .signup--btn:hover, .login--btn:hover, .otp--btn:hover, .otp--btns:hover{
+  cursor: pointer;
+  border: solid 2px transparent;
+}
+
+.signup--btn:hover, .login--btn:hover, .otp--btn:hover, .otp--btns:hover{
+  background: #FFFFFF;
+  color: #0086ff;
+  transition: 0.5ms;
+  box-shadow: 0px 4px 20px rgba(0, 134, 255, 0.4);
+  border: solid 2px #0086FF;
+}
+
+.resend:hover{
+  color: #FFFFFF;
+  background: #0086FF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.5ms;
+  border: solid 2px #FFFFFF;
+}
+
+.login--btn:hover{
+  color: #000;
+}
+
+.otp--input:hover, .otp--input:focus{
+  outline: none;
+  border: solid 2px #0086FF;
+}
+
+.login--panel{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 25px;
+  padding: 20px;
+}
+
+.login--btn{
+  width: 100px;
+  height: 45px;
+  background: #FCFDFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login--btn > i{
+  font-size: 22px;
+}
+
+.otp--field{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  column-gap: 15px;
+}
+
+.otp--input{
+  width: 70px;
+  height: 40px;
+  background: #FCFDFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  border: solid 2px transparent;
+  text-align: center;
+}
+
+.otp--input::placeholder, .otp--input {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: #413E3E;
+}
+
+.otpbtn{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 33px;
+}
+
+.otp--btns{
+  width: 190px;
+  height: 50px;
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 38px;
+  background: #0086FF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+  border: none;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.resend{
+  background: #FFFFFF;
+  color: #0086FF;
+  box-shadow: 0px 4px 20px rgba(0, 134, 255, 0.25);
+}
+
+.otp--call{
+  width: 300px;
+  height: 70px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width:950px) {
+  .setup--img{
+    display: none;
+  }
+
+  .rectangle{
+    width: 100vw;
+    left: 0;
+    border-radius: 0px 0px;
+  }
+
+  .signup--btn{
+    left: 0%;
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width:450px) {
+  .container{
+    transform: scale(0.8);
+  }
+
+  .otp--input{
+    width: 60px;
+    height: 35px;
+  }
+  
+  .otp--input::placeholder, .otp--input {
+    font-size: 26px;
+  }
+}
